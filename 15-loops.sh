@@ -1,5 +1,5 @@
 #!/bin/bash
-USER=$(id -u)
+USERID=$(id -u)
 R="\e[32m"
 G="\e[33m"
 Y="\e[34m"
@@ -13,9 +13,10 @@ LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIMESTAMP.log"
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo -e"$2 ... $R failuere"
+        echo -e"$2 ... $R failuere $N"
+        exit 1
     else 
-        echo "$2....success"
+        echo -e "$2.... $G success $N"
     fi
 }
 echo "script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
