@@ -1,7 +1,7 @@
 #!/bin/bash
 
-echo1
-echo2
-echo3
-echo4
-echo5
+echo 1
+echo 2
+echo 3
+echo 4
+echo 5
