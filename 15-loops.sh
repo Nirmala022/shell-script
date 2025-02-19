@@ -32,7 +32,7 @@ do
     dnf list installed $package &>>$LOG_FILE_NAME
     if [ $? -ne 0 ]
     then 
-        dnf installed $package -y &>>$LOG_FILE_NAME
+        dnf install $package -y &>>$LOG_FILE_NAME
         VALIDATE $? "insatalling $package"
     else
         echo -e "$package is already $Y ...installed $N"
