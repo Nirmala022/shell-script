@@ -38,7 +38,7 @@ else
    echo -e " $G mysql is already....installed"
 fi
 
-dnf list installed git
+dnf list installed git  &>>$LOG_FILE_NAME
 if [ $? -ne 0 ]
 then
    dnf install git -y &>>$LOG_FILE_NAME
