@@ -29,7 +29,7 @@ fi
 for package in $@
 do
    dnf list installed $package &>>LOG_FILE_NAME
-   
+
    if [ $? -ne 0]
    then 
      dnf installed $package -y
