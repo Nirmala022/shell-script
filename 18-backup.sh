@@ -32,6 +32,19 @@ USAGE(){
 if [ $# -lt 2 ]
 then 
     USAGE
-fi    
+fi 
 
-echo "Script started executing at: $TIMESTAMP" 
+if [! -d $SOURCE_DIR]
+then  
+    echo -e "$SOURCE_DIR does not exits...please check"
+    exit 1
+fi
+
+if [! -d $DEST_DIR]
+then  
+    echo -e "$DEST_DIR does not exits...please check"
+    exit 1
+fi
+
+
+echo "Script started executing at: $TIMESTAMP" &>>$LOG_FILE_NAME
